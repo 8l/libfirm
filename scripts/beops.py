@@ -16,7 +16,6 @@ class RegisterReq(object):
 def singlereq(regclass, regname):
 	reg = None
 	for r in regclass.registers:
-		print "Cls %s R: %s" % (regclass, r,)
 		if r.name == regname:
 			reg = r
 			break
