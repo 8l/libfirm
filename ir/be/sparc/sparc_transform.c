@@ -2792,8 +2792,8 @@ void sparc_transform_graph(ir_graph *irg)
 	mode_fp    = sparc_reg_classes[CLASS_sparc_fp].mode;
 	mode_fp2   = mode_D;
 	//mode_fp4 = ?
-	mode_flags = sparc_reg_classes[CLASS_sparc_flags_class].mode;
-	assert(sparc_reg_classes[CLASS_sparc_fpflags_class].mode == mode_flags);
+	mode_flags = sparc_reg_classes[CLASS_sparc_flags].mode;
+	assert(sparc_reg_classes[CLASS_sparc_fpflags].mode == mode_flags);
 
 	frame_base = NULL;
 

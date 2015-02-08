@@ -51,11 +51,11 @@ $mode_fp4     = "sparc_mode_Q";
 		{ name => "i7", encoding => 31, dwarf => 31 },
 		{ mode => $mode_gp }
 	],
-	fpflags_class => [
+	fpflags => [
 		{ name => "fpflags" },
 		{ mode => $mode_fpflags, flags => "manual_ra" }
 	],
-	flags_class => [
+	flags => [
 		{ name => "flags" },
 		{ mode => $mode_flags, flags => "manual_ra" }
 	],
