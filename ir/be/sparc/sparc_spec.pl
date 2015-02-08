@@ -47,7 +47,7 @@ $mode_fp4     = "sparc_mode_Q";
 		{ name => "i3", encoding => 27, dwarf => 27 },
 		{ name => "i4", encoding => 28, dwarf => 28 },
 		{ name => "i5", encoding => 29, dwarf => 29 },
-		{ name => "frame_pointer", encoding => 30, dwarf => 30, realname => "fp" },
+		{ name => "fp", encoding => 30, dwarf => 30 },
 		{ name => "i7", encoding => 31, dwarf => 31 },
 		{ mode => $mode_gp }
 	],
@@ -446,18 +446,18 @@ Restore => {
 		imm => {
 			attr       => "ir_entity *immediate_entity, int32_t immediate_value",
 			custominit => "sparc_set_attr_imm(res, immediate_entity, immediate_value);",
-			in_reqs    => [ "sp", "frame_pointer", "gp" ],
+			in_reqs    => [ "sp", "fp", "gp" ],
 			ins        => [ "stack", "frame_pointer", "left" ],
 		},
 		reg => {
-			in_reqs    => [ "sp", "frame_pointer", "gp", "gp" ],
+			in_reqs    => [ "sp", "fp", "gp", "gp" ],
 			ins        => [ "stack", "frame_pointer", "left", "right" ],
 		}
 	},
 },
 
 RestoreZero => {
-	in_reqs  => [ "sp", "frame_pointer" ],
+	in_reqs  => [ "sp", "fp" ],
 	out_reqs => [ "sp:I|S" ],
 	ins      => [ "stack", "frame_pointer" ],
 	outs     => [ "stack" ],

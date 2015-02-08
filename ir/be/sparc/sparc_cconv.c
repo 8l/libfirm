@@ -31,7 +31,7 @@ static const unsigned ignore_regs[] = {
 
 	REG_SP,
 	REG_O7,
-	REG_FRAME_POINTER,
+	REG_FP,
 	REG_I7,
 
 	REG_FPFLAGS,
@@ -113,7 +113,7 @@ static unsigned default_caller_saves[BITSET_SIZE_ELEMS(N_SPARC_REGISTERS)];
 
 static const unsigned returns_twice_saved[] = {
 	REG_SP,
-	REG_FRAME_POINTER,
+	REG_FP,
 	REG_I7
 };
 static unsigned default_returns_twice_saves[BITSET_SIZE_ELEMS(N_SPARC_REGISTERS)];

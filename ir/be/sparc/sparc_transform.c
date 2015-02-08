@@ -41,7 +41,7 @@
 DEBUG_ONLY(static firm_dbg_module_t *dbg = NULL;)
 
 static const arch_register_t *sp_reg = &sparc_registers[REG_SP];
-static const arch_register_t *fp_reg = &sparc_registers[REG_FRAME_POINTER];
+static const arch_register_t *fp_reg = &sparc_registers[REG_FP];
 static calling_convention_t  *current_cconv = NULL;
 static be_stackorder_t       *stackorder;
 static ir_mode               *mode_gp;
